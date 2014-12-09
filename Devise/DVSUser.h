@@ -3,115 +3,69 @@
 //
 //  Copyright (c) 2014 Netguru Sp. z o.o. All rights reserved.
 //
+//  Licensed under the MIT License.
+//
 
 #import <Foundation/Foundation.h>
-#import "DVSTypedefs.h"
-#import "DVSValidator.h"
 
-typedef NS_ENUM(NSInteger, DVSActionType) {
-    DVSLoginAction,
-    DVSRegistrationAction,
-    DVSRemindPasswordAction,
-    DVSChangePasswordAction
-};
+@class DVSConfiguration, DVSUser;
 
-@protocol DVSUserDataSource;
+/// The completion block of all user-related requests.
+///
+/// @param user The response user object of the request.
+/// @param error An error that occured, if any.
+typedef void (^DVSUserRequestCompletionBlock)(DVSUser *user, NSError *error);
 
+/// The completion block of all user-related requests.
+///
+/// @param error An error that occured, if any.
+typedef void (^DVSUserAnonymousRequestCompletionBlock)(NSError *error);
+
+// /////////////////////////////////////////////////////////////////////////////
+
+/// The user data model.
 @interface DVSUser : NSObject
 
-/// User's email. Stored in keychain
-@property (strong, nonatomic) NSString *email;
+/// User's unique identifier.
+@property (strong, nonatomic, readonly) NSString *identifier;
 
-/// User's password. Used only in user authentication. Will be not saved at all
-@property (strong, nonatomic) NSString *password;
+/// User's email address.
+@property (strong, nonatomic, readonly) NSString *email;
 
-/// User's session token. Is set by the server upon successful authentication.
-/// Stored in keychain. Is automatically added for every request which requires it.
-@property (nonatomic, strong) NSString *sessionToken;
+/// An authentication token which can be used in protected requests.
+@property (strong, nonatomic, readonly) NSString *token;
 
-/// User's data source.
-@property (weak, nonatomic) id <DVSUserDataSource> dataSource;
+// /////////////////////////////////////////////////////////////////////////////
 
-+ (DVSUser *)user;
+/// Creates a user object by decoding it from its JSON reprensentation.
+///
+/// You may override this method in your subclasses if you use custom parameters
+/// which are present in server responses. Just remember to call super.
+///
+/// @param dictionary A deserialized JSON dictionary representing a user.
+- (instancetype)initWithJSONRepresentation:(NSDictionary *)dictionary;
 
-/// Gets the currently logged in user from disk and returns an instance of it. If there is none, returns nil.
-+ (DVSUser *)currentUser;
-
-- (NSDictionary *)extraLoginParams;
-- (NSDictionary *)extraRegistrationParams;
-- (NSDictionary *)extraRemindPasswordParams;
-- (NSDictionary *)extraChangePasswordParams;
-
-- (id)objectForKey:(NSString *)key action:(DVSActionType)actionType;
-- (void)setObject:(id)object forKey:(NSString *)key action:(DVSActionType)actionType;
-
-- (void)loginWithSuccess:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-- (void)loginWithExtraParams:(DVSExtraParamsBlock)params success:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-
-- (void)remindPasswordWithSuccess:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-- (void)remindPasswordWithExtraParams:(DVSExtraParamsBlock)params success:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-+ (void)remindPasswordWithEmail:(NSString *)email success:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-
-- (void)registerWithSuccess:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-- (void)registerWithExtraParams:(DVSExtraParamsBlock)params success:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-
-- (void)changePasswordWithNewPassword:(NSString *)newPassword success:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-- (void)changePasswordWithNewPassword:(NSString *)newPassword extraParams:(DVSExtraParamsBlock)params success:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-
-- (void)deleteAccount;
-- (void)deleteAccountWithSuccess:(DVSVoidBlock)success failure:(DVSErrorBlock)failure;
-
-- (void)logout;
+/// The configuration used by the model.
+///
+/// Uses the default configuration instance by default. You may return a
+/// different configuration object in your subclasses.
+///
+/// @returns A configuration object to use with this model class.
++ (DVSConfiguration *)configuration;
 
 @end
 
-@protocol DVSUserDataSource <NSObject>
+// /////////////////////////////////////////////////////////////////////////////
 
-@optional
+@interface DVSUser (DVSLocalPersistence) <NSSecureCoding>
 
-/// Email parameter in login route (default: "email").
-- (NSString *)nameForEmailInUserLogin:(DVSUser *)user;
+/// A locally saved user object (if any).
++ (instancetype)localUser;
 
-/// Password parameter in login route (default: "password").
-- (NSString *)nameForPasswordInUserLogin:(DVSUser *)user;
+/// Saves the locally saved user object.
++ (void)setLocalUser:(DVSUser *)user;
 
-/// Email parameter in forgot password route (default: "email").
-- (NSString *)nameForEmailInUserRemindPassword:(DVSUser *)user;
-
-/// Password parameter in forgot password route (default: "password").
-- (NSString *)nameForPasswordInRemindPassword:(DVSUser *)user;
-
-/// Email  parameter in register route (default: "email").
-- (NSString *)nameForEmailInUserRegistration:(DVSUser *)user;
-
-/// Password  parameter in register route (default: "password").
-- (NSString *)nameForPasswordInRegistration:(DVSUser *)user;
-
-
-- (NSString *)nameForPasswordInChangePassword:(DVSUser *)user;
-
-- (NSString *)nameForPasswordConfirmationInChangePassword:(DVSUser *)user;
-
-/* Allows customization in validation during login process. Following rules are always used:
- * - validate(@"password").required(),
- * - validate(@"email").required().emailSyntax()
- */
-- (NSArray *)additionalValidationRulesForLogin:(DVSUser *)user;
-
-/* Allows customization in validation during remind password process. Following rules are always used:
- * - validate(@"email").required().emailSyntax()
- */
-- (NSArray *)additionalValidationRulesForRemindPassword:(DVSUser *)user;
-
-/* Allows customization in validation during remind password process. Following rules are always used:
- * - validate(@"password").required().match(newPassword)
- */
-- (NSArray *)additionalValidationRulesForChangePassword:(DVSUser *)user;
-
-/* Allows customization in validation during registration process. Following rules are always used:
- * - validate(@"password").required(),
- * - validate(@"email").required().emailSyntax()
- */
-- (NSArray *)additionalValidationRulesForRegistration:(DVSUser *)user;
+/// Removes the locally saved user object.
++ (void)removeLocalUser;
 
 @end
