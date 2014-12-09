@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "DVSPropertyValidator.h"
 
+typedef NSError * (^DVSValidationBlock)(NSString *);
+
 #define validate(property) ({[DVSPropertyValidator validatorForPropertyName:@#property];})
 
 @interface DVSValidator : NSObject

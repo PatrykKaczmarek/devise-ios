@@ -60,23 +60,11 @@
     NSArray *array = rules();
     NSArray *properties = [self propertiesOfModel:model];
     NSMutableArray *errors = [NSMutableArray array];
-    
-    if (array.count == 0) {
-        NSString *message = [NSString stringWithFormat:@"Lack of validation rules. Are you sure you don't want to define rules for %@ model", [model class]];
-        [[DVSConfiguration sharedConfiguration] logMessage:message];
-    }
-    
+
     for (DVSPropertyValidator *validator in array) {
-        
         [self validatePropertyInValidator:validator ofModel:model];
-        
-        if (![properties dvs_containsString:validator.propertyName]) {
-            NSString *message = [NSString stringWithFormat:@"Property named '%@' wasn't found in %@ class. Property validation skipped.", validator.propertyName, [model class]];
-            [[DVSConfiguration sharedConfiguration] logMessage:message];
-            
-        } else {
+        if ([properties dvs_containsString:validator.propertyName]) {
             id value = [model valueForKey:validator.propertyName];
-            
             if (throwFirstError) {
                 NSError *validationError = [validator simpleValidationOfValue:value];
                 if (validationError) {
@@ -98,7 +86,7 @@
         (void)validator.propertyName;
     }
     @catch (NSException *exception) {
-        NSAssert1(NO, @"An exception appear during parameter from %@ model validation. Did you remember to use parentheses in block call?", [model class]);
+        NSAssert(NO, @"An exception appear during parameter from %@ model validation. Did you remember to use parentheses in block call?", [model class]);
     }
 }
 

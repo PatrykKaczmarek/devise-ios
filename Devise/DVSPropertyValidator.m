@@ -11,7 +11,7 @@
 #import "NSNumber+Devise.h"
 #import "NSError+Devise.h"
 #import "NSDate+Devise.h"
-#import "DVSTypedefs.h"
+#import "DVSValidator.h"
 
 static inline NSString * intToString(NSUInteger x) {
     return [NSString stringWithFormat:@"%lu", (unsigned long)x];
@@ -581,8 +581,6 @@ NSString * const dvs_attribute = @"{attribute}";
 - (BOOL)isObject:(NSObject *)object kindOfClass:(Class)class {
     
     if (object == nil) {
-        NSString *message = [NSString stringWithFormat:@"Cannot validate %@ property when is nil. Validation skipped", self.propertyName];
-        [[DVSConfiguration sharedConfiguration] logMessage:message];
         return NO;
         
     } else if (![object isKindOfClass:class]) {
