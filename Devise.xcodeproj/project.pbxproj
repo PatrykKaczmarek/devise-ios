@@ -13,23 +13,14 @@
 		3A6E03FE1A263866006ECA3E /* OHHTTPStubs+DeviseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E03FD1A263866006ECA3E /* OHHTTPStubs+DeviseTests.m */; };
 		3A93A1481A2E2F2F006827D3 /* DVSHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A93A1461A2E2F2F006827D3 /* DVSHTTPClient.h */; };
 		3A93A1491A2E2F2F006827D3 /* DVSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A93A1471A2E2F2F006827D3 /* DVSHTTPClient.m */; };
-		3A93A1511A2E5119006827D3 /* DVSHTTPClientSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A93A1501A2E5119006827D3 /* DVSHTTPClientSpec.m */; };
 		3AA22E1C1A25031300FE04D1 /* DVSConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E1A1A25031300FE04D1 /* DVSConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AA22E1D1A25031300FE04D1 /* DVSConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E1B1A25031300FE04D1 /* DVSConfiguration.m */; };
-		3AA22E1F1A2509AF00FE04D1 /* DVSConfigurationSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E1E1A2509AF00FE04D1 /* DVSConfigurationSpec.m */; };
 		3AA22E261A25112800FE04D1 /* NSError+Devise.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E241A25112800FE04D1 /* NSError+Devise.h */; };
 		3AA22E271A25112800FE04D1 /* NSError+Devise.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E251A25112800FE04D1 /* NSError+Devise.m */; };
 		3AA22E2A1A2514DD00FE04D1 /* NSString+Devise.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E281A2514DD00FE04D1 /* NSString+Devise.h */; };
 		3AA22E2B1A2514DD00FE04D1 /* NSString+Devise.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E291A2514DD00FE04D1 /* NSString+Devise.m */; };
 		3AA22E2F1A251B1400FE04D1 /* DVSUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E2D1A251B1400FE04D1 /* DVSUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3AA22E301A251B1400FE04D1 /* DVSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E2E1A251B1400FE04D1 /* DVSUser.m */; };
-		3AA22E381A252FD700FE04D1 /* DVSUser+Querying.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E361A252FD700FE04D1 /* DVSUser+Querying.h */; };
-		3AA22E391A252FD700FE04D1 /* DVSUser+Querying.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E371A252FD700FE04D1 /* DVSUser+Querying.m */; };
-		3AA22E3B1A2530EA00FE04D1 /* DVSTypedefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E3A1A2530EA00FE04D1 /* DVSTypedefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3AA22E411A25330C00FE04D1 /* DVSAPIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E3D1A25330C00FE04D1 /* DVSAPIManager.h */; };
-		3AA22E421A25330C00FE04D1 /* DVSAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E3E1A25330C00FE04D1 /* DVSAPIManager.m */; };
-		3AA22E431A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AA22E3F1A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.h */; };
-		3AA22E441A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E401A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.m */; };
 		3AA22E571A25353B00FE04D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E491A25353B00FE04D1 /* AppDelegate.m */; };
 		3AA22E581A25353B00FE04D1 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E4B1A25353B00FE04D1 /* HomeViewController.m */; };
 		3AA22E591A25353B00FE04D1 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA22E4D1A25353B00FE04D1 /* LoginViewController.m */; };
@@ -50,12 +41,9 @@
 		3AD4C7141A24FA2A00F0AE67 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4C6AD1A24F38000F0AE67 /* Foundation.framework */; };
 		3AD4C7161A24FA2F00F0AE67 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD4C7151A24FA2F00F0AE67 /* UIKit.framework */; };
 		3AD4C7261A24FC5800F0AE67 /* Devise-Demo-Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AD4C7251A24FC5800F0AE67 /* Devise-Demo-Assets.xcassets */; };
-		5E64C17A1A30603E00A41A88 /* DVSPropertyValidatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E64C1791A30603E00A41A88 /* DVSPropertyValidatorSpec.m */; };
-		5E64C1B51A30900000A41A88 /* DVSUser+Memorize.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E64C1B31A30900000A41A88 /* DVSUser+Memorize.h */; };
-		5E64C1B61A30900000A41A88 /* DVSUser+Memorize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E64C1B41A30900000A41A88 /* DVSUser+Memorize.m */; };
-		5E7E166E1A264F6900684A60 /* DVSPropertyValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7E166A1A264F6900684A60 /* DVSPropertyValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E7E166E1A264F6900684A60 /* DVSPropertyValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7E166A1A264F6900684A60 /* DVSPropertyValidator.h */; };
 		5E7E166F1A264F6900684A60 /* DVSPropertyValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E166B1A264F6900684A60 /* DVSPropertyValidator.m */; };
-		5E7E16701A264F6900684A60 /* DVSValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7E166C1A264F6900684A60 /* DVSValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E7E16701A264F6900684A60 /* DVSValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E7E166C1A264F6900684A60 /* DVSValidator.h */; };
 		5E7E16711A264F6900684A60 /* DVSValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E166D1A264F6900684A60 /* DVSValidator.m */; };
 		5EE295081A35C086009441E1 /* NSDictionary+Devise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EE295061A35C086009441E1 /* NSDictionary+Devise.h */; };
 		5EE295091A35C086009441E1 /* NSDictionary+Devise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE295071A35C086009441E1 /* NSDictionary+Devise.m */; };
@@ -65,7 +53,6 @@
 		5EF381DD1A279998006875D4 /* NSDate+Devise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF381DB1A279998006875D4 /* NSDate+Devise.m */; };
 		5EF381F01A287458006875D4 /* NSNumber+Devise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF381EE1A287458006875D4 /* NSNumber+Devise.h */; };
 		5EF381F11A287458006875D4 /* NSNumber+Devise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF381EF1A287458006875D4 /* NSNumber+Devise.m */; };
-		5EF381F31A287749006875D4 /* DVSValidatorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF381F21A287749006875D4 /* DVSValidatorSpec.m */; };
 		5EF5E6DA1A2667D80049BEA6 /* NSArray+Devise.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EF5E6D81A2667D80049BEA6 /* NSArray+Devise.h */; };
 		5EF5E6DB1A2667D80049BEA6 /* NSArray+Devise.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5E6D91A2667D80049BEA6 /* NSArray+Devise.m */; };
 		7243E8D52A343108BF107B69 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D68076C37469F69754581011 /* libPods-Tests.a */; };
@@ -125,13 +112,6 @@
 		3AA22E291A2514DD00FE04D1 /* NSString+Devise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Devise.m"; sourceTree = "<group>"; };
 		3AA22E2D1A251B1400FE04D1 /* DVSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSUser.h; sourceTree = "<group>"; };
 		3AA22E2E1A251B1400FE04D1 /* DVSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSUser.m; sourceTree = "<group>"; };
-		3AA22E361A252FD700FE04D1 /* DVSUser+Querying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DVSUser+Querying.h"; sourceTree = "<group>"; };
-		3AA22E371A252FD700FE04D1 /* DVSUser+Querying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DVSUser+Querying.m"; sourceTree = "<group>"; };
-		3AA22E3A1A2530EA00FE04D1 /* DVSTypedefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSTypedefs.h; sourceTree = "<group>"; };
-		3AA22E3D1A25330C00FE04D1 /* DVSAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSAPIManager.h; sourceTree = "<group>"; };
-		3AA22E3E1A25330C00FE04D1 /* DVSAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSAPIManager.m; sourceTree = "<group>"; };
-		3AA22E3F1A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSHTTPReqeustOperationManager.h; sourceTree = "<group>"; };
-		3AA22E401A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSHTTPReqeustOperationManager.m; sourceTree = "<group>"; };
 		3AA22E481A25353B00FE04D1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3AA22E491A25353B00FE04D1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3AA22E4A1A25353B00FE04D1 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -187,8 +167,6 @@
 		3AD4C7251A24FC5800F0AE67 /* Devise-Demo-Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Devise-Demo-Assets.xcassets"; sourceTree = "<group>"; };
 		5E64C1791A30603E00A41A88 /* DVSPropertyValidatorSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSPropertyValidatorSpec.m; sourceTree = "<group>"; };
 		5E64C17B1A30872B00A41A88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		5E64C1B31A30900000A41A88 /* DVSUser+Memorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DVSUser+Memorize.h"; sourceTree = "<group>"; };
-		5E64C1B41A30900000A41A88 /* DVSUser+Memorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DVSUser+Memorize.m"; sourceTree = "<group>"; };
 		5E7E166A1A264F6900684A60 /* DVSPropertyValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSPropertyValidator.h; sourceTree = "<group>"; };
 		5E7E166B1A264F6900684A60 /* DVSPropertyValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVSPropertyValidator.m; sourceTree = "<group>"; };
 		5E7E166C1A264F6900684A60 /* DVSValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVSValidator.h; sourceTree = "<group>"; };
@@ -272,7 +250,6 @@
 			children = (
 				3AD4C6831A24DB1700F0AE67 /* Devise.h */,
 				3AA22E211A250FC300FE04D1 /* DVSMacros.h */,
-				3AA22E3A1A2530EA00FE04D1 /* DVSTypedefs.h */,
 			);
 			name = "Supporting Headers";
 			sourceTree = "<group>";
@@ -298,12 +275,12 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		3AA22E2C1A251B0200FE04D1 /* Models */ = {
+		3AA22E2C1A251B0200FE04D1 /* User Model */ = {
 			isa = PBXGroup;
 			children = (
 				3AA22E311A252D5000FE04D1 /* User */,
 			);
-			name = Models;
+			name = "User Model";
 			sourceTree = "<group>";
 		};
 		3AA22E311A252D5000FE04D1 /* User */ = {
@@ -311,10 +288,6 @@
 			children = (
 				3AA22E2D1A251B1400FE04D1 /* DVSUser.h */,
 				3AA22E2E1A251B1400FE04D1 /* DVSUser.m */,
-				3AA22E361A252FD700FE04D1 /* DVSUser+Querying.h */,
-				3AA22E371A252FD700FE04D1 /* DVSUser+Querying.m */,
-				5E64C1B31A30900000A41A88 /* DVSUser+Memorize.h */,
-				5E64C1B41A30900000A41A88 /* DVSUser+Memorize.m */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -324,10 +297,6 @@
 			children = (
 				3A93A1461A2E2F2F006827D3 /* DVSHTTPClient.h */,
 				3A93A1471A2E2F2F006827D3 /* DVSHTTPClient.m */,
-				3AA22E3D1A25330C00FE04D1 /* DVSAPIManager.h */,
-				3AA22E3E1A25330C00FE04D1 /* DVSAPIManager.m */,
-				3AA22E3F1A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.h */,
-				3AA22E401A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.m */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -401,7 +370,7 @@
 				3AA22E191A2502FE00FE04D1 /* Configuration */,
 				3AA22E3C1A25327F00FE04D1 /* Networking */,
 				3AA22E231A25110200FE04D1 /* Categories */,
-				3AA22E2C1A251B0200FE04D1 /* Models */,
+				3AA22E2C1A251B0200FE04D1 /* User Model */,
 				3AA22E201A250F9E00FE04D1 /* Supporting Headers */,
 			);
 			path = Devise;
@@ -591,13 +560,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF381DC1A279998006875D4 /* NSDate+Devise.h in Headers */,
-				3AA22E411A25330C00FE04D1 /* DVSAPIManager.h in Headers */,
 				5EF381F01A287458006875D4 /* NSNumber+Devise.h in Headers */,
 				5E7E166E1A264F6900684A60 /* DVSPropertyValidator.h in Headers */,
 				3AA22E261A25112800FE04D1 /* NSError+Devise.h in Headers */,
-				3AA22E3B1A2530EA00FE04D1 /* DVSTypedefs.h in Headers */,
 				5E7E16701A264F6900684A60 /* DVSValidator.h in Headers */,
-				3AA22E431A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.h in Headers */,
 				5EF381D41A2756BB006875D4 /* NSURL+Devise.h in Headers */,
 				3AD4C6AB1A24F1D200F0AE67 /* Devise-Prefix.pch in Headers */,
 				3AA22E2A1A2514DD00FE04D1 /* NSString+Devise.h in Headers */,
@@ -605,11 +571,9 @@
 				3AA22E2F1A251B1400FE04D1 /* DVSUser.h in Headers */,
 				5EE295081A35C086009441E1 /* NSDictionary+Devise.h in Headers */,
 				5EF5E6DA1A2667D80049BEA6 /* NSArray+Devise.h in Headers */,
-				3AA22E381A252FD700FE04D1 /* DVSUser+Querying.h in Headers */,
 				3A93A1481A2E2F2F006827D3 /* DVSHTTPClient.h in Headers */,
 				3AD4C6841A24DB1700F0AE67 /* Devise.h in Headers */,
 				3AA22E5F1A2535BC00FE04D1 /* DVSMacros.h in Headers */,
-				5E64C1B51A30900000A41A88 /* DVSUser+Memorize.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,14 +842,10 @@
 				5EF381D51A2756BB006875D4 /* NSURL+Devise.m in Sources */,
 				3A93A1491A2E2F2F006827D3 /* DVSHTTPClient.m in Sources */,
 				5EF5E6DB1A2667D80049BEA6 /* NSArray+Devise.m in Sources */,
-				3AA22E441A25330C00FE04D1 /* DVSHTTPReqeustOperationManager.m in Sources */,
-				3AA22E391A252FD700FE04D1 /* DVSUser+Querying.m in Sources */,
 				3AA22E271A25112800FE04D1 /* NSError+Devise.m in Sources */,
 				5E7E16711A264F6900684A60 /* DVSValidator.m in Sources */,
 				3AA22E2B1A2514DD00FE04D1 /* NSString+Devise.m in Sources */,
 				5EF381DD1A279998006875D4 /* NSDate+Devise.m in Sources */,
-				5E64C1B61A30900000A41A88 /* DVSUser+Memorize.m in Sources */,
-				3AA22E421A25330C00FE04D1 /* DVSAPIManager.m in Sources */,
 				3AA22E1D1A25031300FE04D1 /* DVSConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,11 +854,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA22E1F1A2509AF00FE04D1 /* DVSConfigurationSpec.m in Sources */,
 				3A6E03FE1A263866006ECA3E /* OHHTTPStubs+DeviseTests.m in Sources */,
-				5E64C17A1A30603E00A41A88 /* DVSPropertyValidatorSpec.m in Sources */,
-				5EF381F31A287749006875D4 /* DVSValidatorSpec.m in Sources */,
-				3A93A1511A2E5119006827D3 /* DVSHTTPClientSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
