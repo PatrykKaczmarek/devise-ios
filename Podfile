@@ -13,7 +13,7 @@ inhibit_all_warnings!
 
 # Framework dependencies
 pod 'AFNetworking', '~> 2.5'
-pod 'SSKeychain', '~> 1.2.2'
+pod 'UICKeyChainStore', '~> 1.1'
 
 # Unit tests exclusive dependencies
 target 'Tests', exclusive: true do link_with 'Devise Tests'
